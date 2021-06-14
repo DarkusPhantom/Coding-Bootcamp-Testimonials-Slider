@@ -1,0 +1,33 @@
+:root {
+  --dark-Blue: hsl(240, 38%, 20%);
+  --grayish-Blue: hsl(240, 18%, 77%);
+
+  --fontSize: 32px;
+
+  --fontfamily-Inter: "Inter", sans-serif;
+
+  --fontWeight-extraLight: 300;
+  --fontWeight-semibold: 500;
+  --fontWeight-bold: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--fontSize);
+  font-family: var(--fontfamily-Inter);
+  background: url("../images/pattern-curve.svg") no-repeat;
+  background-size: 50vh;
+  background-position: left bottom;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 10vh auto;
+}
+
+.container__img {
+  width: 100%;
+  max-width: 100%;
+}

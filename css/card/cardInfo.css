@@ -1,0 +1,28 @@
+.card__info {
+  background: url("../../images/pattern-quotes.svg") no-repeat top center;
+  background-size: 70px;
+}
+
+.card__text {
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+  text-align: center;
+  color: var(--grayish-Blue);
+  filter: brightness(0.5);
+}
+
+.card__name {
+  font-size: 1rem;
+  font-weight: var(--fontWeight-semibold);
+  text-align: center;
+  margin: 0;
+}
+
+.card__profesion {
+  font-size: 0.9rem;
+  font-weight: var(--fontWeight-extraLight);
+  text-align: center;
+  color: var(--grayish-Blue);
+  filter: brightness(0.8);
+  margin: 8px 0;
+}
