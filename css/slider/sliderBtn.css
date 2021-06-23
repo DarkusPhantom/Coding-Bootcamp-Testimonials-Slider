@@ -1,12 +1,15 @@
 .container__btn {
-  width: 80px;
+  width: 25%;
+  max-width: 100px;
   height: 45px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  bottom: -15px;
-  left: 105px;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  box-shadow: 0 -5px 150px black;
   border-radius: 30px;
   background: white;
 }
@@ -26,4 +29,12 @@
 .btn img {
   width: 30%;
   height: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container__btn {
+    box-shadow: 0 -5px 150px black;
+    left: 25%;
+    transform: translateX(-25%);
+  }
 }

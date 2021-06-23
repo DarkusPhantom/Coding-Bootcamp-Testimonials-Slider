@@ -1,28 +1,66 @@
 .card__info {
   background: url("../../images/pattern-quotes.svg") no-repeat top center;
-  background-size: 70px;
+  background-size: 50px;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "cardText"
+    "cardName"
+    "cardJobTitle";
 }
 
 .card__text {
+  grid-area: cardText;
   font-size: 1.2rem;
   font-weight: var(--font-semibold);
-  text-align: center;
   color: var(--grayish-Blue);
   filter: brightness(0.5);
 }
 
 .card__name {
+  grid-area: cardName;
   font-size: 1rem;
   font-weight: var(--fontWeight-semibold);
-  text-align: center;
   margin: 0;
 }
 
-.card__profesion {
+.card__jobTitle {
+  grid-area: cardJobTitle;
   font-size: 0.9rem;
   font-weight: var(--fontWeight-extraLight);
-  text-align: center;
   color: var(--grayish-Blue);
   filter: brightness(0.8);
   margin: 8px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__info {
+    display: grid;
+    grid-template-areas:
+      "cardText   cardText      cardText      cardText"
+      "cardName   cardJobTitle  cardJobTitle  .";
+    gap: 5px;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    right: 0;
+    transform: translate(-15%, -60%);
+    background-position: 15% 0;
+    background-size: 110px;
+    width: 55%;
+    max-width: 700px;
+    padding: 35px 0 20px 0;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+  .card__text {
+    font-size: 1.9rem;
+  }
+
+  .card__name,
+  .card__jobTitle {
+    font-size: 1.3rem;
+  }
 }

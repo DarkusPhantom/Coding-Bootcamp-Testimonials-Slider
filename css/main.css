@@ -9,6 +9,9 @@
   --fontWeight-extraLight: 300;
   --fontWeight-semibold: 500;
   --fontWeight-bold: 700;
+
+  --pattern-bg: url("../images/pattern-bg.svg");
+  --pattern-curve: url("../images/pattern-curve.svg");
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   padding: 0;
   font-size: var(--fontSize);
   font-family: var(--fontfamily-Inter);
-  background: url("../images/pattern-curve.svg") no-repeat;
+  background: var(--pattern-curve) no-repeat;
   background-size: 50vh;
   background-position: left bottom;
 }
@@ -24,10 +27,22 @@ body {
 .container {
   width: 90%;
   height: 100%;
-  margin: 10vh auto;
+  margin: 0 auto;
 }
 
 .container__img {
   width: 100%;
   max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100%;
+  }
+
+  .container {
+    height: 100vh;
+    margin: auto;
+    position: relative;
+  }
 }
