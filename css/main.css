@@ -12,6 +12,9 @@
 
   --pattern-bg: url("../images/pattern-bg.svg");
   --pattern-curve: url("../images/pattern-curve.svg");
+
+  --icon-prev: url("../../images/icon-prev.svg");
+  --icon-next: url("../../images/icon-next.svg");
 }
 
 body {

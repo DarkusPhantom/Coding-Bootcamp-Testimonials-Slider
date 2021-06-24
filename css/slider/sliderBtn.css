@@ -26,9 +26,12 @@
   cursor: pointer;
 }
 
-.btn img {
-  width: 30%;
-  height: 40%;
+.btn__left {
+  background: var(--icon-prev) no-repeat center;
+}
+
+.btn__right {
+  background: var(--icon-next) no-repeat center;
 }
 
 @media screen and (min-width: 1024px) {
