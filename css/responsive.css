@@ -1,0 +1,73 @@
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100%;
+  }
+
+  .container {
+    height: 100vh;
+    margin: auto;
+    position: relative;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 50vh;
+    margin: auto;
+  }
+
+  .card__slider {
+    width: 55%;
+    max-width: 600px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: -25%;
+    transform: translate(25%, 0);
+  }
+
+  .card__img img:nth-child(1) {
+    box-shadow: none;
+  }
+
+  .container__btn {
+    box-shadow: 0 -5px 150px black;
+    left: 25%;
+    transform: translateX(-25%);
+  }
+
+  .card__info {
+    display: grid;
+    grid-template-areas:
+      "cardText   cardText      cardText      cardText"
+      "cardName   cardJobTitle  cardJobTitle  .";
+    gap: 5px;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    right: 0;
+    transform: translate(-15%, -60%);
+    background-position: 15% 0;
+    background-size: 110px;
+    width: 55%;
+    max-width: 700px;
+    padding: 35px 0 20px 0;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+  .card__text {
+    font-size: 1.9rem;
+  }
+
+  .card__name,
+  .card__jobTitle {
+    font-size: 1.3rem;
+  }
+}

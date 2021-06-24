@@ -17,49 +17,42 @@ const cardData = [
   },
 ];
 
-const btnSlider = document.querySelector("#slider__btn");
+const btnLeft = document.querySelector("#btn__left");
+const btnRight = document.querySelector("#btn__right");
 let counter = 1;
 
-btnSlider.addEventListener("click", (event) => {
-  const btn = event.target.className;
+btnLeft.addEventListener("click", (event) => {
+  event.preventDefault();
 
-  const prevProfile = () => {
-    if (counter > 0) {
-      const cardName = document.querySelector("#card__name");
-      const cardJobTitle = document.querySelector("#card__jobTitle");
-      const cardText = document.querySelector("#card__text");
-      const cardImg = document.querySelector("#card__img img");
+  if (counter > 0) {
+    const cardName = document.querySelector("#card__name");
+    const cardJobTitle = document.querySelector("#card__jobTitle");
+    const cardText = document.querySelector("#card__text");
+    const cardImg = document.querySelector("#card__img img");
 
-      cardName.innerText = cardData[counter].name;
-      cardJobTitle.innerText = cardData[counter].jobTitle;
-      cardText.innerText = cardData[counter].text;
-      cardImg.setAttribute("src", cardData[counter].photo);
+    cardName.innerText = cardData[counter].name;
+    cardJobTitle.innerText = cardData[counter].jobTitle;
+    cardText.innerText = cardData[counter].text;
+    cardImg.setAttribute("src", cardData[counter].photo);
 
-      counter = counter - 1;
-    }
-  };
+    counter = counter - 1;
+  }
+});
 
-  const nextProfile = () => {
-    const lenghtMax = cardData.length - 1;
+btnRight.addEventListener("click", (event) => {
+  const lenghtMax = cardData.length - 1;
 
-    if (counter < lenghtMax) {
-      const cardName = document.querySelector("#card__name");
-      const cardJobTitle = document.querySelector("#card__jobTitle");
-      const cardText = document.querySelector("#card__text");
-      const cardImg = document.querySelector("#card__img img");
+  if (counter < lenghtMax) {
+    const cardName = document.querySelector("#card__name");
+    const cardJobTitle = document.querySelector("#card__jobTitle");
+    const cardText = document.querySelector("#card__text");
+    const cardImg = document.querySelector("#card__img img");
 
-      cardName.innerText = cardData[counter].name;
-      cardJobTitle.innerText = cardData[counter].jobTitle;
-      cardText.innerText = cardData[counter].text;
-      cardImg.setAttribute("src", cardData[counter].photo);
+    cardName.innerText = cardData[counter].name;
+    cardJobTitle.innerText = cardData[counter].jobTitle;
+    cardText.innerText = cardData[counter].text;
+    cardImg.setAttribute("src", cardData[counter].photo);
 
-      counter = counter + 1;
-    }
-  };
-
-  if (btn.includes("btn__left")) {
-    prevProfile();
-  } else if (btn.includes("btn__right")) {
-    nextProfile();
+    counter = counter + 1;
   }
 });

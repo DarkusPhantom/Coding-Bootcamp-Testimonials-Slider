@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet preload" href="css/index.css" type="text/css" media="all" as="style">
+
+    <link rel="preload" href="css/main.min.css" as="style">
+    <link rel="preload" href="css/responsive.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
+
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Coding Bootcamp Testimonials Slider</title>
   </head>
   <body>
@@ -11,16 +21,14 @@
       <div class="card">
         <div class="card__slider">
           <div class="container__img card__background" width="300px">
-            <img src="images/pattern-bg.svg" alt="pattern-bg">
+            <img src="images/pattern-bg.svg" alt="pattern-bg" loading="lazy" width="250px">
           </div>
           <div id="card__img" class="card__img">
-            <img src="./images/image-tanya.jpg" alt="Imagen de Tanya" width="250px"/>
+            <img src="./images/image-tanya.jpg" alt="Imagen de Tanya" loading="lazy" width="250px"/>
           </div>
           <div id="slider__btn" class="container__btn">
-            <button class="btn btn__left">
-            </button>
-            <button class="btn btn__right">
-            </button>
+            <button class="btn btn__left" id="btn__left" name="btn__left"></button>
+            <button class="btn btn__right" id="btn__right" name="btn__right"></button>
           </div>
         </div>
         <div class="card__info">
@@ -32,6 +40,6 @@
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
